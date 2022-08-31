@@ -8,64 +8,59 @@ Code, Compile, Run and Debug online from anywhere in world.
 *******************************************************************************/
 #include <iostream>
 #include <cmath>
-using namespace std;
 
 int main()
 {
     int opcao, numero1, numero2;
     
-    cout << " --->>>CALCULADORA<<<---\n";
-    cout << " 1 <- Adição\n";
-    cout << " 2 <- Subtração\n";
-    cout << " 3 <- Divição\n";
-    cout << " 4 <- Multiplicação\n";
-    cout << " 5 <- Raiz\n";
-    cout << " 0 <- Sair\n\n";
-    cout << " Selecione a operação: ";
-    cin >> opcao;
+    std::cout << " --->>>CALCULADORA<<<---" << std::endl;
+    std::cout << " 1 <- Adição" << std::endl;
+    std::cout << " 2 <- Subtração" << std::endl;
+    std::cout << " 3 <- Divição" << std::endl;
+    std::cout << " 4 <- Multiplicação" << std::endl;
+    std::cout << " 5 <- Raiz" << std::endl;
+    std::cout << " 0 <- Sair\n" << std::endl;
+    std::cout << " Selecione a operação: ";
+    std::cin >> opcao;
     
     if (opcao != 0){
         if (opcao == 5){
-            cout << "\n Digite um número: ";
-            cin >> numero1;
+            std::cout << "\n Digite um número: ";
+            std::cin >> numero1;
         }else{
-            cout << "\n Digite um número: ";
-            cin >> numero1;
+            std::cout << "\n Digite um número: ";
+            std::cin >> numero1;
     
-            cout << "\n Digite um número: ";
-            cin >> numero2;
+            std::cout << "\n Digite um número: ";
+            std::cin >> numero2;
         }
     }
     
     switch(opcao)
     {
         case 1:
-            cout << "\n\n A soma é: " << (numero1 + numero2);
-            cout << "\n\n";
+            std::cout << "\n\n A soma é: " << (numero1 + numero2) << "\n"  << std::endl;
             break;
      
         case 2:
-            cout << "\n\n A subtração é: " << (numero1 - numero2);
-            cout << "\n\n";
+            std::cout << "\n\n A subtração é: " << (numero1 - numero2) << "\n" << std::endl;
             break;
         
         case 3:
-            cout << "\n\n A divisão é: " << (numero1 / numero2);
-            if ((numero1 % numero2) > 0) cout << "\n O resto da divisão é: " << (numero1 % numero2);
-            cout << "\n\n";
+            std::cout << "\n\n A divisão é: " << (numero1 / numero2);
+            if ((numero1 % numero2) > 0) std::cout << "\n O resto da divisão é: " << (numero1 % numero2) << "\n" << std::endl;
             break;
             
         case 4:
-            cout << "\n\n A multiplicação é: " << (numero1 * numero2);
-            cout << "\n\n";
+            std::cout << "\n\n A multiplicação é: " << (numero1 * numero2) << "\n" << std::endl;
             break;
         
         case 5:
-            cout << "\n\n A raiz de " << numero1 << " é: " << (sqrt(numero1));
+            std::cout << "\n\n A raiz de " << numero1 << " é: " << (sqrt(numero1)) << "\n" << std::endl;
             break;
         
         case 0:
-            cout << "\n\n !!!Tchauzinho!!!\n\n";
+            std::cout << "\n\n !!!Tchauzinho!!!\n" << std::endl;
             break;
         
         default:
